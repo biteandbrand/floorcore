@@ -241,6 +241,63 @@ img {
   margin: 0 auto 38px;
 }
 
+/* ---------- Under construction badge ---------- */
+.construction-badge {
+  display: inline-block;
+  background: rgba(201, 161, 90, 0.12);
+  border: 1px solid var(--accent);
+  color: var(--accent-strong);
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+
+/* ---------- Countdown ---------- */
+.countdown {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.countdown-item {
+  background: rgba(32, 32, 26, 0.88);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  min-width: 84px;
+  padding: 16px 10px;
+}
+
+.countdown-num {
+  display: block;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2.1rem;
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--accent-strong);
+}
+
+.countdown-label {
+  display: block;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-top: 4px;
+}
+
+.countdown-note {
+  color: var(--text-dim);
+  font-size: 0.88rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
 /* ---------- Categories ---------- */
 .categories {
   padding: 56px 0 24px;
@@ -326,6 +383,7 @@ img {
 }
 
 .product-img {
+  position: relative;
   aspect-ratio: 4 / 3;
   overflow: hidden;
   background: #2a2a22;
@@ -335,7 +393,26 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: blur(9px);
+  transform: scale(1.08);
   transition: transform 0.35s ease;
+}
+
+.product-img::after {
+  content: "Under Construction";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(20, 20, 16, 0.45);
+  color: var(--accent-strong);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-align: center;
+  pointer-events: none;
 }
 
 .product-card:hover .product-img img {
