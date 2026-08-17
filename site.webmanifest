@@ -1,0 +1,13 @@
+{
+  "name": "FloorCore",
+  "short_name": "FloorCore",
+  "description": "Premium LVT & SPC flooring. UK trade and retail supply.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#191914",
+  "theme_color": "#191914",
+  "icons": [
+    { "src": "assets/img/android-chrome-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/img/android-chrome-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
